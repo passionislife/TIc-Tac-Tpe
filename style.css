@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.head {
+  color: white;
+  background-color: #1a2b3d;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.head:hover {
+  box-shadow: 0 0 5px black;
+  margin-top: -15px;
+  border-radius: 30px;
+  border: 1px solid #cac7c7;
+  color: #f8b971;
+  cursor: pointer;
+}
+.container {
+  background-color: peachpuff;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 320px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.5s;
+  padding: 10px;
+}
+.container:hover {
+  box-shadow: 0 0 7px black;
+}
+.box1 {
+  display: flex;
+  height: 33.3333%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.a {
+  color: black;
+  display: flex;
+  width: 33.3333%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  border-radius: 30px;
+  opacity: 40%;
+}
+.a:hover {
+  box-shadow: 0 0 7px black;
+  border: 1px solid black;
+  animation: test 3s infinite;
+  opacity: 80%;
+}
+@keyframes test {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#result {
+  background-color: rgb(125, 239, 125);
+  display: none;
+  color: black;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  box-shadow: 0 0 7px black;
+  animation: res 2.5s infinite;
+}
+@keyframes res {
+  0% {
+    width: 15%;
+  }
+  33% {
+    width: 10%;
+  }
+  66% {
+    width: 10%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+#restart {
+  background-color: #de6f79;
+  display: none;
+  color: black;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  box-shadow: 0 0 7px black;
+  cursor: pointer;
+}

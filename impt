@@ -1,0 +1,41 @@
+const apifetch =async (fn)=>{
+    const res = await fetch('https://dummyjson.com/products/1')
+    const data = await res.json()
+  return  fn(data)
+}
+
+ const data =  apifetch((r)=>{
+   return r
+ })
+
+
+data.then((e)=>{
+     console.log(e)
+ })
+
+
+ let lat = 28.390776;
+let long = 77.301799;
+const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener('readystatechange', function () {
+	if (this.readyState === this.DONE) {
+        let test = JSON.parse(this.responseText);
+        let location = test.location;
+        let current = test.current;
+
+        console.log(location.name);
+        console.log(current.temp_c);
+        console.log(current.condition.text);
+        console.log(this.responseText);
+	}
+});
+
+xhr.open('GET', 'https://weatherapi-com.p.rapidapi.com/current.json?q='+lat+'%2C'+long);
+xhr.setRequestHeader('X-RapidAPI-Key', '1e0c7a5e3cmsh9a6fe90b6c199b3p1c66c5jsn8dabdd531194');
+xhr.setRequestHeader('X-RapidAPI-Host', 'weatherapi-com.p.rapidapi.com');
+
+xhr.send(data);
